@@ -7,6 +7,7 @@ Digital Ocean API - https://developers.digitalocean.com/documentation/v2/#domain
 ## Goal
 For Domain Records (DNS) hosted with DigitalOcean, this script will allow you to update the IP address for an `A` record of a subdomain. Uses  Digital Ocean (v2) API.
 
+## Docker
 To build the Docker image, simply run Docker build:
 ```
 docker build --no-cache --tag docker-dynamic-dns .
@@ -22,13 +23,13 @@ To use the image, and run Docker in the background, use the `-d` option:
 docker run -it -d --rm --name dydns-do -e DIGITALOCEAN_TOKEN="XXXXXXXXXXXXXXXXXXXXXX" -e DOMAIN="example.com" -e NAME="subdomain" docker-dynamic-dns-digitalocean
 ```
 
-The environment variables are as follows:
+## Environment Variables
 
-- **DIGITALOCEAN_TOKEN**: the username for the service.
+- **DIGITALOCEAN_TOKEN**: Required. The username for the service.
 
-- **DOMAIN**: the password or token for the service.
+- **DOMAIN**: Required. The domain name.
 
-- **NAME**: The host name that you are updating. ie. example.com
+- **NAME**: Required. The subdomain name that you are updating.
 
 - **INTERVAL**: [OPTIONAL] Specify in how often the script should call the update services in seconds. Default is 21600 seconds (6hrs).
 
