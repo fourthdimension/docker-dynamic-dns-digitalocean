@@ -20,9 +20,9 @@ To use the image, use Docker run:
 docker run -it --rm --name dydns-do -e DIGITALOCEAN_TOKEN="XXXXXXXXXXXXXXXXXXXXXX" -e DOMAIN="example.com" -e NAME="subdomain" docker-dynamic-dns-digitalocean
 ```
 
-To use the image, and run Docker in the background, use the `-d` option:
+To use the image, run Docker in the background and restart always:
 ```
-docker run -it -d --rm --name dydns-do -e DIGITALOCEAN_TOKEN="XXXXXXXXXXXXXXXXXXXXXX" -e DOMAIN="example.com" -e NAME="subdomain" docker-dynamic-dns-digitalocean
+docker run -dit --restart always --name dydns-do -e DIGITALOCEAN_TOKEN="XXXXXXXXXXXXXXXXXXXXXX" -e DOMAIN="example.com" -e NAME="subdomain" docker-dynamic-dns-digitalocean
 ```
 
 ## Environment Variables
