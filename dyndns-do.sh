@@ -5,11 +5,6 @@ api_host="https://api.digitalocean.com/v2"
 #sleep interval is set to 6hrs (default)
 sleep_interval=${SLEEP_INTERVAL:-21600}
 
-die() {
-    echo "$1"
-    exit 1
-}
-
 test -z $DIGITALOCEAN_TOKEN && die "DIGITALOCEAN_TOKEN not set!"
 test -z $DOMAIN && die "DOMAIN not set!"
 test -z $NAME && die "NAME not set!"
