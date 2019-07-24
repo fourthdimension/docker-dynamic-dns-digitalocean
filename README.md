@@ -10,7 +10,7 @@ For Domain Records (DNS) hosted with DigitalOcean, this script will allow you to
 ## Docker
 To build the Docker image, simply run Docker build:
 ```
-docker build --no-cache --tag docker-dynamic-dns .
+docker build --no-cache --tag docker-dynamic-dns-digitalocean .
 ```
 
 To use the image, use Docker run:
