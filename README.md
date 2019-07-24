@@ -1,7 +1,9 @@
 # Docker Dynamic DNS Client for Digital Ocean
 
 GitHub - https://github.com/fourthdimension/docker-dynamic-dns-digitalocean/
+
 Author Site - https://www.the4d.ca/
+
 Digital Ocean API - https://developers.digitalocean.com/documentation/v2/#domain-records
 
 ## Goal
